@@ -1,0 +1,22 @@
+@main_loop
+MOV "ENTER A NUMBER" OUT
+MOV IN R2
+TNUM R2
+JMP @valid_number
+MOV "INVALID NUMBER" OUT
+JMP @main_loop
+
+@valid_number
+CAT "FIBONACCI TO " R2
+MOV ACC OUT
+MOV 1 R0
+MOV 0 R1
+
+@calc_loop
+MOV R0 OUT
+ADD R0 R1
+MOV R0 R1
+MOV ACC R0
+TGT ACC R2
+JMP @calc_loop
+JMP @main_loop
