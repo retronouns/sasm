@@ -1,4 +1,4 @@
-export default function SASM(codeText, readIn, writeOut, onCompile){
+export default function Sasm(codeText, readIn, writeOut, onCompile){
   let output = {};
 
   let validTokens = {
